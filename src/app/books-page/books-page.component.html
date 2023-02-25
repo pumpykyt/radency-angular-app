@@ -1,0 +1,23 @@
+<div class="books-page">
+  <div class="book-list-actions">
+    <app-book-create></app-book-create>
+    <app-book-edit (closeModalEvent)="handleCloseEditModal($event)" [isEditModalVisible]="showEditModal" [book]="selectedEditBook"></app-book-edit>
+  </div>
+  <p-selectButton class="select-toggle" (onChange)="handleSelectChange()" [options]="showOptions" [(ngModel)]="selectedShowOption"></p-selectButton>
+  <div *ngIf="books" class="books-wrapper">
+    <div *ngFor="let book of shownBooks" class="book-item">
+      <img class="book-cover" [src]="book.cover" alt="book-image"/>
+      <div class="book-item-text-content">
+        <p class="book-title">{{book.title}}</p>
+        <p class="book-author">by {{book.author}}</p>
+        <p-rating [readonly]="true" [stars]="5" [cancel]="false" [(ngModel)]="book.rating"></p-rating>
+        <div class="book-item-actions">
+          <p-button class="p-button-danger" label="Delete"></p-button>
+          <p-button (click)="handleShowViewModal(book.id)" label="More"></p-button>
+          <p-button (click)="handleShowEditModal(book.id)" label="Edit"></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-book-item (closeModalEvent)="handleCloseViewModal($event)" [isViewModalVisible]="showViewModal" [book]="selectedBook"></app-book-item>

@@ -1,0 +1,48 @@
+.error{
+    color: red;
+    font-size: 14px;
+}
+
+.book-edit{
+    background-color: #e3d5ca;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    padding: 20px;
+}
+
+.input{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: none;
+    outline: none;
+    margin-left: 20px;
+}
+
+.edit-book-form{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-element{
+    margin-bottom: 20px;
+}
+
+.text-label{
+    font-size: 20px;
+}
+
+.page-title{
+    color: #264653;
+}
+
+.book-cover-img{
+    width: 65%;
+}

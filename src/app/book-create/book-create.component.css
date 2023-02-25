@@ -1,0 +1,38 @@
+.error{
+    color: red;
+    font-size: 14px;
+}
+
+.input{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: none;
+    outline: none;
+    margin-left: 20px;
+}
+
+.create-book-form{
+    background-color: #e3d5ca;
+    border-radius: 15px;
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-element{
+    margin-bottom: 20px;
+}
+
+.text-label{
+    font-size: 20px;
+}
+
+.page-title{
+    color: #264653;
+}

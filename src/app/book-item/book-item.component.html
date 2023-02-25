@@ -1,0 +1,24 @@
+<div *ngIf="isViewModalVisible" class="modal">
+  <div class="book-card">
+    <div class="book-data">
+      <img class="book-cover" [src]="book.cover"/>
+      <p class="book-meta">Rating: {{book.rating}}</p>
+      <p class="book-meta">Reviews: {{book.reviews.length}}</p>
+      <p-button (onClick)="closeModal()" label="Close"></p-button>
+    </div>
+    <div class="book-headers">
+      <p class="book-title">{{book.title}}</p>
+      <p class="book-author">written by {{book.author}}</p>
+      <hr/>
+      <p class="book-content">{{book.content}}</p>
+      <hr/>
+      <p class="book-title">Reviews:</p>
+      <div class="reviews-wrapper">
+        <div class="review" *ngFor="let review of book.reviews">
+          <p class="review-author">{{review.reviewer}}</p>
+          <p class="review-message">{{review.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>>
